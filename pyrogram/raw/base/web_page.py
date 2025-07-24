@@ -26,7 +26,7 @@ from typing import Union
 from pyrogram import raw
 from pyrogram.raw.core import TLObject
 
-WebPage = Union[raw.types.messages.WebPage]
+WebPage = Union[raw.types.WebPage, raw.types.WebPageEmpty, raw.types.WebPageNotModified, raw.types.WebPagePending]
 
 
 # noinspection PyRedeclaration
@@ -34,27 +34,20 @@ class WebPage:  # type: ignore
     """Telegram API base type.
 
     Constructors:
-        This base type has 1 constructor available.
+        This base type has 4 constructors available.
 
         .. currentmodule:: pyrogram.raw.types
 
         .. autosummary::
             :nosignatures:
 
-            messages.WebPage
-
-    Functions:
-        This object can be returned by 1 function.
-
-        .. currentmodule:: pyrogram.raw.functions
-
-        .. autosummary::
-            :nosignatures:
-
-            messages.GetWebPage
+            WebPage
+            WebPageEmpty
+            WebPageNotModified
+            WebPagePending
     """
 
-    QUALNAME = "pyrogram.raw.base.messages.WebPage"
+    QUALNAME = "pyrogram.raw.base.WebPage"
 
     def __init__(self):
         raise TypeError("Base types can only be used for type checking purposes: "

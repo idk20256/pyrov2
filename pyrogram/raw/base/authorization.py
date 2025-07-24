@@ -26,7 +26,7 @@ from typing import Union
 from pyrogram import raw
 from pyrogram.raw.core import TLObject
 
-Authorization = Union[raw.types.auth.Authorization, raw.types.auth.AuthorizationSignUpRequired]
+Authorization = Union[raw.types.Authorization]
 
 
 # noinspection PyRedeclaration
@@ -34,34 +34,27 @@ class Authorization:  # type: ignore
     """Telegram API base type.
 
     Constructors:
-        This base type has 2 constructors available.
+        This base type has 1 constructor available.
 
         .. currentmodule:: pyrogram.raw.types
 
         .. autosummary::
             :nosignatures:
 
-            auth.Authorization
-            auth.AuthorizationSignUpRequired
+            Authorization
 
     Functions:
-        This object can be returned by 7 functions.
+        This object can be returned by 1 function.
 
         .. currentmodule:: pyrogram.raw.functions
 
         .. autosummary::
             :nosignatures:
 
-            auth.SignUp
-            auth.SignIn
-            auth.ImportAuthorization
-            auth.ImportBotAuthorization
-            auth.CheckPassword
-            auth.RecoverPassword
-            auth.ImportWebTokenAuthorization
+            auth.AcceptLoginToken
     """
 
-    QUALNAME = "pyrogram.raw.base.auth.Authorization"
+    QUALNAME = "pyrogram.raw.base.Authorization"
 
     def __init__(self):
         raise TypeError("Base types can only be used for type checking purposes: "

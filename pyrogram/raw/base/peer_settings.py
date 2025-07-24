@@ -26,7 +26,7 @@ from typing import Union
 from pyrogram import raw
 from pyrogram.raw.core import TLObject
 
-PeerSettings = Union[raw.types.messages.PeerSettings]
+PeerSettings = Union[raw.types.PeerSettings]
 
 
 # noinspection PyRedeclaration
@@ -41,20 +41,10 @@ class PeerSettings:  # type: ignore
         .. autosummary::
             :nosignatures:
 
-            messages.PeerSettings
-
-    Functions:
-        This object can be returned by 1 function.
-
-        .. currentmodule:: pyrogram.raw.functions
-
-        .. autosummary::
-            :nosignatures:
-
-            messages.GetPeerSettings
+            PeerSettings
     """
 
-    QUALNAME = "pyrogram.raw.base.messages.PeerSettings"
+    QUALNAME = "pyrogram.raw.base.PeerSettings"
 
     def __init__(self):
         raise TypeError("Base types can only be used for type checking purposes: "

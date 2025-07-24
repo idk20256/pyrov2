@@ -26,7 +26,7 @@ from typing import Union
 from pyrogram import raw
 from pyrogram.raw.core import TLObject
 
-AutoSaveSettings = Union[raw.types.account.AutoSaveSettings]
+AutoSaveSettings = Union[raw.types.AutoSaveSettings]
 
 
 # noinspection PyRedeclaration
@@ -41,20 +41,10 @@ class AutoSaveSettings:  # type: ignore
         .. autosummary::
             :nosignatures:
 
-            account.AutoSaveSettings
-
-    Functions:
-        This object can be returned by 1 function.
-
-        .. currentmodule:: pyrogram.raw.functions
-
-        .. autosummary::
-            :nosignatures:
-
-            account.GetAutoSaveSettings
+            AutoSaveSettings
     """
 
-    QUALNAME = "pyrogram.raw.base.account.AutoSaveSettings"
+    QUALNAME = "pyrogram.raw.base.AutoSaveSettings"
 
     def __init__(self):
         raise TypeError("Base types can only be used for type checking purposes: "

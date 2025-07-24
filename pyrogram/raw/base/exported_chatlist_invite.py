@@ -26,7 +26,7 @@ from typing import Union
 from pyrogram import raw
 from pyrogram.raw.core import TLObject
 
-ExportedChatlistInvite = Union[raw.types.chatlists.ExportedChatlistInvite]
+ExportedChatlistInvite = Union[raw.types.ExportedChatlistInvite]
 
 
 # noinspection PyRedeclaration
@@ -41,7 +41,7 @@ class ExportedChatlistInvite:  # type: ignore
         .. autosummary::
             :nosignatures:
 
-            chatlists.ExportedChatlistInvite
+            ExportedChatlistInvite
 
     Functions:
         This object can be returned by 1 function.
@@ -51,10 +51,10 @@ class ExportedChatlistInvite:  # type: ignore
         .. autosummary::
             :nosignatures:
 
-            chatlists.ExportChatlistInvite
+            chatlists.EditExportedInvite
     """
 
-    QUALNAME = "pyrogram.raw.base.chatlists.ExportedChatlistInvite"
+    QUALNAME = "pyrogram.raw.base.ExportedChatlistInvite"
 
     def __init__(self):
         raise TypeError("Base types can only be used for type checking purposes: "

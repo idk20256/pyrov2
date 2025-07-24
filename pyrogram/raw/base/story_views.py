@@ -26,7 +26,7 @@ from typing import Union
 from pyrogram import raw
 from pyrogram.raw.core import TLObject
 
-StoryViews = Union[raw.types.stories.StoryViews]
+StoryViews = Union[raw.types.StoryViews]
 
 
 # noinspection PyRedeclaration
@@ -41,20 +41,10 @@ class StoryViews:  # type: ignore
         .. autosummary::
             :nosignatures:
 
-            stories.StoryViews
-
-    Functions:
-        This object can be returned by 1 function.
-
-        .. currentmodule:: pyrogram.raw.functions
-
-        .. autosummary::
-            :nosignatures:
-
-            stories.GetStoriesViews
+            StoryViews
     """
 
-    QUALNAME = "pyrogram.raw.base.stories.StoryViews"
+    QUALNAME = "pyrogram.raw.base.StoryViews"
 
     def __init__(self):
         raise TypeError("Base types can only be used for type checking purposes: "
